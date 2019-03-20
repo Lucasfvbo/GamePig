@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" href="css/grid.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet" type="text/css">
+
+        <title>Pig Game</title>
+
+    </head>
+
+
+    <body>
+        <header>
+            <div class="inicial-texto">
+                <h1>Bem vindo ao <br> &mdash; <strong>GAME PIG</strong> !</h1>
+            </div>
+            <a class="btn btn-rule scrol-to-rule" href="#regras">Regras</a>
+            <a class="btn btn-play scrol-to-game" href="#jogo"><strong>PLAY !</strong></a>
+        </header>
+
+        <section class="section-regras" id="regras">
+            <div class="row">
+                <h2>Que a sorte esteja com você</h2>
+                <p class="texto-regras   text-js">- O jogo tem 2 jogadores, jogando em rodadas.<br>
+- Em cada turno, um jogador joga um dado quantas vezes quiser. Cada resultado é adicionado à sua pontuação ROUND.<br>
+- MAS, se o jogador rolar o número 1, a pontuação do round será perdida. Depois disso, é a vez do próximo jogador.<br>
+- O jogador pode escolher 'Hold', o que significa que sua pontuação ROUND é adicionada à sua pontuação GLOBAL.
+Depois disso, é a vez do próximo jogador.<br>
+- O primeiro jogador a atingir 100 pontos na pontuação GLOBAL ganha o jogo</p>
+            </div>
+        </section>
+
+        <section class="section-game" id="jogo">
+        <div class="wrapper clearfix">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+            
+            <img src="dice-5.png" alt="Dice" class="dice">
+        </div>
+        
+        <script src="app.js"></script>
+        </section>
+
+        <footer>
+                    <ul class="social-links">
+                        <li><a href="https://www.instagram.com/lucas_fvbo/" target="Instagram"><ii class="ion-social-instagram"></ii></a></li>
+                    </ul>
+            <div class="row">
+                <p>
+                    By Lucas Frota &mdash; baseado no jogo do curso &mdash; 
+                    The Complete JavaScript Course 2019: Build Real Projects. Instrutor &mdash; Jonas Schmedtmann.
+                </p>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

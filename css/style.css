@@ -1,0 +1,392 @@
+*{
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html,
+body {
+background-color: #fff;
+color: #555;
+font-family: 'Lato', 'Arial', sans-serif;
+font-weight: 300;
+font-size: 20px;
+text-rendering: optimizeLegibility;
+overflow-x: hidden;
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+content: '.';
+clear: both;
+display: block;
+height: 0;
+visibility: hidden;
+}
+
+.row {
+max-width: 1140px;
+margin: 0 auto;
+}
+
+section {
+padding: 80px 0;
+}
+
+/* ------- HEADER -------  */
+
+header {
+background-image:linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(img/Overwatch-Year-of-the-Rooster-17-1.jpg);
+background-size: cover;
+background-position: center;
+height: 100vh;
+background-attachment: fixed;
+}
+
+.inicial-texto {
+position: absolute;
+width: 1140px;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+}
+
+h1 { 
+margin-top: 0;
+margin-left: 32%;
+color: rgb(255, 0, 0);
+font-size: 300%;
+font-weight: 290;
+text-transform: uppercase;
+letter-spacing: 1px;
+word-spacing: 4px;
+}
+
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #EB4D4D;
+    content: " ";
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* ----- LINKS ----- */
+
+a:link,
+a:visited {
+    color: #EB4D4D;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #EB4D4D;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/* ------- BOTÕES ------- */
+
+.btn {
+margin-left: 27%;
+margin-top: 35%;}
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-play:link,
+.btn-play:visited {
+    background-color: #EB4D4D;
+    border: 1px solid #EB4D4D;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-rule:link,
+.btn-rule:visited {
+    border: 1px solid #EB4D4D;
+    color: #EB4D4D;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: rgb(233, 41, 41);
+}
+
+.btn-play:hover,
+.btn-play:active {
+    border: 1px solid rgb(233, 41, 41);
+}
+
+.btn-rule:hover,
+.btn-rule:active {
+    border: 1px solid rgb(233, 41, 41);
+    color: #fff;
+}
+
+
+/* ------- REGRAS -------*/
+
+.section-regras .texto-regras {margin-bottom: 30px;}
+
+.texto-regras {
+line-height: 200%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.texto-regras:after {
+    display: block;
+    height: 2px;
+    background-color: #EB4D4D;
+    content: " ";
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* ------- JOGO -------*/
+
+.section-game {
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)), url(img/back.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+.wrapper {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+
+
+
+
+/**********************************************
+*** PLAYERS
+**********************************************/
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #EB4D4D;
+    margin-bottom: 130px;
+}
+
+.active { background-color: #f7f7f7; }
+.active .player-name { font-weight: 300; }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -7px;
+    right: 10px;
+    
+}
+
+.player-current-box {
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 30px;
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { font-weight: 400; }
+button:hover i { margin-right: 20px; }
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+.btn-new { top: 45px;}
+.btn-roll { top: 403px;}
+.btn-hold { top: 467px;}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+
+/* ------- FOOTER ------- */
+
+footer {
+    background-color: rgb(24, 23, 23);
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+    margin-top: -25px;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited, 
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+
+.ion-social-instagram {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.ion-social-instagram:hover {
+    color: #517fa4;
+}
+
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
